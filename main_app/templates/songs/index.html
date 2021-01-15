@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <a href="/songs/create">Add a New Song</a>
+    <hr />
+    {% for song in songs %}
+        <a href="/songs/{{ song.id }}">
+            <p>Title: {{ song.title }}</p>
+        </a>
+            <p>Artist: {{ song.artist }}</p>
+            <p>Year: {{ song.year }}</p>
+            <p>Mood: {{ song.mood }}</p>
+            <p>Notes: {{ song.notes }}</p>
+        <a href="/user/{{ song.user.username }}">
+            <p>Added By: {{ song.user.username }}</p>
+        </a>
+        <hr />
+    {% endfor %}
+{% endblock %}

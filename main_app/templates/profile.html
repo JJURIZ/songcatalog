@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+    <h1>{{username}}'s Song Catalog</h1>
+    {% for song in songs %}
+    <a href="/songs/{{ song.id }}">
+        <p>Title: {{ song.title }}</p>
+    </a>
+    {% endfor %}
+{% endblock %}

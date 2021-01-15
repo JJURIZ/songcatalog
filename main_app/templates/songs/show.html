@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card-body">
+    <h2 class="card-title"> Title: {{ song.title }}</h2>
+    <p> Artist: {{ song.artist }}</p>
+    <p> Year: {{ song.year }}</p>
+    <p> Mood: {{ song.mood }}</p>
+    <p> Notes: {{ song.notes }}</p>
+ 
+
+    <a class="btn btn-primary" href="{% url 'song_update' song.id %}">Update Details</a>
+    <a class="btn btn-danger" href="{% url 'song_delete' song.id %}">Delete Song</a> 
+
+</div>
+{% endblock %}
