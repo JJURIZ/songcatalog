@@ -8,8 +8,8 @@
     <p> Notes: {{ song.notes }}</p>
  
 
-    <a class="btn btn-primary" href="{% url 'song_update' song.id %}">Update Details</a>
-    <a class="btn btn-danger" href="{% url 'song_delete' song.id %}">Delete Song</a> 
+    <a class="btn btn-primary" href="{% url 'songs_update' song.id %}">Update Details</a>
+    <a class="btn btn-danger" href="{% url 'songs_delete' song.id %}">Delete Song</a> 
 
 </div>
 {% endblock %}
